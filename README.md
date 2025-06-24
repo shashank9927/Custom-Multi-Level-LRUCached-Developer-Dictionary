@@ -21,32 +21,32 @@ The cache is **implemented from scratch** using a **doubly linked list and hashm
 
 ## 📸 Postman API Previews
 
-### GET /api/words/
+### GET /api/words/ [1st time slower lookup (time: 36 ms) - fetched from database]
 
-![Get Word - 1st time slower lookup - fetched from database](assets-postman/2. Slower 1st time lookup - loaded from database - Get all words API endpoint.png)
-
----
-### GET /api/words/
-
-![Get Word - 2nd time faster lookup - fetched from cache](assets-postman/3. Faster lookup - fetched from custom built cache - Get all words API endpoint.png)
+![Get Word - 1st time slower lookup - fetched from database](assets-postman/2.%20Slower%201st%20time%20lookup%20-%20loaded%20from%20database%20-%20Get%20all%20words%20API%20endpoint.png)
 
 ---
+### GET /api/words/ [2nd time faster lookup (time: 5 ms) - fetched from cache]
 
-### POST /api/capacity
-
-![Set custom cache capacity](assets-postman/5. Set cache capacity endpoint.png)
+![Get Word - 2nd time faster lookup - fetched from cache](assets-postman/3.%20Faster%20lookup%20-%20fetched%20from%20custom%20built%20cache%20-%20Get%20all%20words%20API%20endpoint.png)
 
 ---
 
-### DELETE /api/cache
+### POST /api/capacity [Set custom cache capacity]
 
-![Clear Cache](assets-postman/6. Delete cache API endpoint.png)
+![Set custom cache capacity](assets-postman/5.%20Set%20cache%20capacity%20endpoint.png)
 
 ---
 
-### POST /cache-warmer/trigger
+### DELETE /api/cache [Clear Cache]
 
-![Trigger cache warming](assets-postman/10. Trigger cache warming API endpoint.png)
+![Clear Cache](assets-postman/6.%20Delete%20cache%20API%20endpoint.png)
+
+---
+
+### POST /cache-warmer/trigger [Trigger cache warming]
+
+![Trigger cache warming](assets-postman/10.%20Trigger%20cache%20warming%20API%20endpoint.png)
 
 
 ## API Endpoints
