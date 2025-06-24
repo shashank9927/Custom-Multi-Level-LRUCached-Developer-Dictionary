@@ -3,8 +3,8 @@
 Cache manager - to create a cache instance and automatic cleanup of expired items
  **/
 
-const LRUCacheWithTTL = require('./utils/LRUCache');
-const Logger = require('./utils/Logger');
+const LRUCacheWithTTL = require('./LRUCache');
+const Logger = require('./Logger');
 
 // default configuration constants
 const DEFAULT_L1_CAPACITY = 20;
