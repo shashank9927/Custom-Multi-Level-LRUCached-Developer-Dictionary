@@ -9,7 +9,7 @@ exports.getCacheWarmerStatus = (req, res) => {
 // Trigger cache warming
 exports.triggerCacheWarmer = async (req, res) => {
     try {
-        const limit = req.body.limit || 50;
+        const limit = req.body && req.body.limit ? parseInt(req.body.limit) : 50;
         const result = await cacheWarmer.warmMultiLevelCache(limit);
 
         res.json({
