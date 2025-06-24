@@ -119,6 +119,9 @@ class MultiLevelCache{
         const newL1 = new LRUCacheWithTTL(l1Capacity);
         const newL2 = new LRUCacheWithTTL(l2Capacity);
         
+        this.l1Cache = newL1;
+        this.l2Cache = newL2;
+
         // Reset statistics if clearing cache
         if (clearCache) {
         this.l1Hits = 0;
