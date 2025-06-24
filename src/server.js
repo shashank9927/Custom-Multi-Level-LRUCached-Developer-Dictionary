@@ -4,6 +4,7 @@ const connectDB = require('./utils/db');
 const routes = require('./routes');
 const Logger = require('./utils/Logger');
 const cacheWarmer = require('./utils/cacheWarmer');
+const { notFound, errorHandler } = require('./errorMiddleware');
 
 dotenv.config();
 
@@ -44,6 +45,10 @@ app.get('/', (req, res) => {
             }}
     });
 });
+
+// Error handler middleware
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
