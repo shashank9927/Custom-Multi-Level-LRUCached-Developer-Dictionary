@@ -19,7 +19,7 @@ The cache is **implemented from scratch** using a **doubly linked list and hashm
 - **Cache System**: Custom unified LRU cache with TTL support
 - **Testing**: Automated API tests with custom test runner
 
-## 📸 Postman API Previews
+## 📸 Some Postman API Previews
 
 ### GET /api/words/ [1st time slower lookup (time: 36 ms) - fetched from database]
 
